@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: chmod1
+        run: chmod +x autogen.sh
+      - name: chmod2
+        run: chmod -R +x build-aux/
+      - name: autogen
+        run: ./autogen.sh
+      - name: configure
+        run: ./configure
+      - name: help2man
+        run: sudo apt-get install -y help2man
+      - name: automake
+        run: help2man automake
+      - name: ls
+        run: ls ./
