@@ -241,12 +241,9 @@ AC_OUTPUT
 # Report the state of this version of Autoconf if this is a beta.
 m4_bmatch(m4_defn([AC_PACKAGE_VERSION]), [[-a-z]],
 [    cat <<EOF
-
 You are about to use an experimental version of Autoconf.  Be sure to
 read the relevant mailing lists, most importantly <autoconf@gnu.org>.
-
 Below you will find information on the status of this version of Autoconf.
-
 EOF
     sed -n '/^\* Status/,$p' $srcdir/BUGS
 echo
