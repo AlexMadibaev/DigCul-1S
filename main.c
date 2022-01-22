@@ -1,10 +1,8 @@
-#include <stdio.h>
-
-int main()
-{
-    int num;
-    char symb;
-    scanf("%d %c", &num, &symb);
-    printf("%d %c", num, symb);
-    return 0;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main()
+//{
+//    printf("Hello world!\n");
+//    return 0;
+//}
